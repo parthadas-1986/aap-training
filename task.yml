@@ -1,5 +1,5 @@
 ---
-- hosts: app:db
+- hosts: pd_app:pd_database
   tasks:
   - name: create directory
     file:
