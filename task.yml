@@ -1,0 +1,6 @@
+---
+hosts:
+tasks:
+- name: create directory
+  path: /home/ubuntu/partha
+  state: directory
