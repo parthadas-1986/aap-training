@@ -1,7 +1,7 @@
 ---
-hosts: app
-tasks:
-- name: create directory
-  file:
-    path: /home/ubuntu/partha
-    state: directory
+- hosts: app
+  tasks:
+  - name: create directory
+    file:
+      path: /home/ubuntu/partha
+      state: directory
