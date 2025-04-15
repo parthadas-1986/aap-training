@@ -1,5 +1,5 @@
 ---
-- hosts: app
+- hosts: app:db
   tasks:
   - name: create directory
     file:
