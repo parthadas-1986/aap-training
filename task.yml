@@ -1,5 +1,5 @@
 ---
-hosts:
+hosts: app
 tasks:
 - name: create directory
   file:
