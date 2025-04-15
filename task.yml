@@ -5,3 +5,10 @@
     file:
       path: /home/ubuntu/partha
       state: directory
+  - name: create a user 
+    user:
+      name: testuser
+      shell: /bin/bash
+      uid: 1100
+      comment: "my first user "
+      state: present
