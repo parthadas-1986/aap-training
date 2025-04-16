@@ -6,7 +6,7 @@
       when: ansible_os_family == "Debian"
       ignore_errors: true
  
-    - name: Install {{ pkg }} package
+    - name: Install package
       package:
         name: "{{ pkg }}"
         state: present
