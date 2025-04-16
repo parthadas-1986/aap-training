@@ -1,3 +1,0 @@
-role: webserver
-pkg_name: nginx
-service_name: nginx
