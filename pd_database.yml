@@ -1,0 +1,3 @@
+role: database
+pkg_name: mysql-server
+service_name: mysql
