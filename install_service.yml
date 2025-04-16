@@ -1,6 +1,6 @@
 ---
 - name: Install and start services based on group vars
-  hosts: pd_app:pd_database
+  hosts: all
   #hosts: web
   #hosts:db
   tasks:
