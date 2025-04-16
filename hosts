@@ -1,0 +1,8 @@
+[app]
+node1 ansible_host=172.31.9.188
+
+[app:vars]
+web_content=<h1>This is a demo</h1><p>Host: {{ ansible_hostname }}</p>
+
+[db]
+node2 ansible_host=172.31.0.57
