@@ -1,3 +1,3 @@
 role: database
-pkg_name: mysql-server
+pkg_name: mysql1-server
 service_name: mysql
