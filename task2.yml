@@ -32,7 +32,7 @@
     - name: Create a user with vault password
       user:
         name: appuser1
-        password: "{{ vault_password.database) }}"
+        password: "{{ vault_password.database }}"
         shell: /bin/bash
         state: present
 
