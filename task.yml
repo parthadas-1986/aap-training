@@ -3,7 +3,7 @@
   tasks:
   - name: create directory
     file:
-      path: "/home/ec2-user/test1"
+      path: "/home/ubuntu/test1"
       state: directory
   - name: create a user 
     user:
