@@ -3,7 +3,7 @@
   tasks:
   - name: create directory
     file:
-      path: "/home/ubuntu/test1"
+      path: "/home/ubuntu/test"
       state: directory
   - name: create a user 
     user:
