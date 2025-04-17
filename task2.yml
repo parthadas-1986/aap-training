@@ -12,15 +12,15 @@
       debug:
         msg: "Running on host {{ inventory_hostname }} in group {{ group_names }}"
 
-    - name: Show Encrypted Web Password (web group only)
-      debug:
-        var: vault_password.application
-      when: "'app' in group_names"
+    # - name: Show Encrypted Web Password (web group only)
+    #   debug:
+    #     var: vault_password.application
+    #   when: "'app' in group_names"
 
-    - name: Show Encrypted DB Password (db group only)
-      debug:
-        var: vault_password.database
-      when: "'db' in group_names"
+    # - name: Show Encrypted DB Password (db group only)
+    #   debug:
+    #     var: vault_password.database
+    #   when: "'db' in group_names"
 
     - name: Ensure required packages are installed
       apt:
@@ -31,8 +31,8 @@
 
     - name: Create a user with vault password
       user:
-        name: appuser
-        password: "{{ (vault_password.application if 'web' in group_names else vault_password.database) }}"
+        name: appuser1
+        password: "{{ vault_password.database) }}"
         shell: /bin/bash
         state: present
 
@@ -41,8 +41,8 @@
         dest: "/etc/app_secure.conf"
         content: |
           [credentials]
-          user = appuser
-          password = {{ vault_password.application if 'web' in group_names else vault_password.database }}
+          user = appuser1
+          password = {{ vault_password.database }}
         owner: root
         group: root
         mode: '0600'
