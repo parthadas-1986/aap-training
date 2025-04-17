@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: app
   vars_files:
     - vault.yml
   tasks:
