@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: app
   tasks:
   - name: create directory
     file:
@@ -7,8 +7,8 @@
       state: directory
   - name: create a user 
     user:
-      name: testuser
+      name: testuser2
       shell: /bin/bash
-      uid: 1100
+      uid: 1103
       comment: "my first user "
       state: present
