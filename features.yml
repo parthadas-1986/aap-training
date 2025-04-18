@@ -1,5 +1,5 @@
 ---
-- name: Demonstrate Advanced Playbook Features
+- name: Test Advanced Playbook Features
   hosts: webservers
   become: true
   vars_files:
