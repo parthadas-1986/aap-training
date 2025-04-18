@@ -1,19 +1,19 @@
-#[app]
-#node1 ansible_host=172.31.9.188
+[app]
+node1 ansible_host=172.31.9.188
 
-#[app:vars]
-#web_content=<h1>This is a demo</h1><p>Host: {{ ansible_hostname }}</p>
+[app:vars]
+web_content=<h1>This is a demo</h1><p>Host: {{ ansible_hostname }}</p>
 
-#[db]
-#node2 ansible_host=172.31.0.57
+[db]
+node2 ansible_host=172.31.0.57
 
-#[all:vars]
-#ansible_user=ubuntu
-
-[webservers]
-web01 ansible_host=172.31.9.188
-web02 ansible_host=172.31.0.57
-
-[webservers:vars]
+[all:vars]
 ansible_user=ubuntu
-ansible_python_interpreter=/usr/bin/python3
+
+#[webservers]
+#web01 ansible_host=172.31.9.188
+#web02 ansible_host=172.31.0.57
+
+#[webservers:vars]
+#ansible_user=ubuntu
+#ansible_python_interpreter=/usr/bin/python3

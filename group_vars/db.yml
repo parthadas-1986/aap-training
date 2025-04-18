@@ -1,2 +1,2 @@
 pkg: mariadb-server
-ansible_password: "{{ vault_password.database }}"
+#ansible_password: "{{ vault_password.database }}"
